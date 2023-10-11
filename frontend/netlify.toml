@@ -1,5 +1,6 @@
 [build]
   base = "portfolio/frontend" # Le répertoire racine de votre projet React
   command = "npm run build" # La commande de build pour créer les fichiers statiques
-  publish = "portfolio/frontend/build" # Le répertoire où se trouvent les fichiers à publier
+  publish = "build" # Le répertoire où se trouvent les fichiers à publier
+
 
