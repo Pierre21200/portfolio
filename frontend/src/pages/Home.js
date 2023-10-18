@@ -135,28 +135,38 @@ function Home() {
 
     if (rect.top < window.innerHeight && rect.bottom >= 0) {
       if (!competencesSeen) {
-        if (window.scrollY >= rect.top + 1000) {
+        if (window.scrollY >= rect.top + 3500) {
           competences.style.textShadow = `5px 5px #558ABB`;
           competencesSeen = true;
+          var checked = document.querySelectorAll('.input-drop');
+          checked.forEach((element) => {
+            element.checked = true;
+          });
+          console.log('oui');
         }
       }
     } else {
-      competences.style.textShadow = `none`;
-    }
-    // Animation des dropdowns de la section compétences
-    if (scrollY >= 3900) {
       var checked = document.querySelectorAll('.input-drop');
       checked.forEach((element) => {
-        element.checked = true;
-      });
-    }
-
-    if (scrollY <= 3900) {
-      var unchecked = document.querySelectorAll('.input-drop');
-      unchecked.forEach((element) => {
         element.checked = false;
       });
+      competences.style.textShadow = `none`;
     }
+
+    // Animation des dropdowns de la section compétences
+    // if (scrollY >= 3900) {
+    //   var checked = document.querySelectorAll('.input-drop');
+    //   checked.forEach((element) => {
+    //     element.checked = true;
+    //   });
+    // }
+
+    // if (scrollY <= 3900) {
+    //   var unchecked = document.querySelectorAll('.input-drop');
+    //   unchecked.forEach((element) => {
+    //     element.checked = false;
+    //   });
+    // }
 
     // Animation opacity du texte banniere
     var element = document.getElementById('fade-in');
@@ -337,9 +347,7 @@ function Home() {
           </div>
 
           <div id='competences'>
-            <Parallax translateY={['-200px', '0px']} startScroll={3500} endScroll={4000}>
-              <h2 id='competences-title'>MES COMPETENCES</h2>
-            </Parallax>
+            <h2 id='competences-title'>MES COMPETENCES</h2>
 
             <div className='dropdown-container'>
               <div className='dropdown'>
