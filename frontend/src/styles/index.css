@@ -608,6 +608,15 @@ html {
   }
 }
 
+@media all and (min-width: 0px) and (max-width: 1024px) and (max-height: 664px) {
+  #profil-pic-container {
+    top: 5vh;
+  }
+  .waiting-parallax {
+    height: 550vh;
+  }
+}
+
 .infos-profil {
   display: flex;
   justify-content: center;
