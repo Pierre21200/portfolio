@@ -617,6 +617,12 @@ html {
   }
 }
 
+@media all and (max-height: 664px) {
+  .banniere-text {
+    top: 100px;
+  }
+}
+
 .infos-profil {
   display: flex;
   justify-content: center;
