@@ -380,7 +380,7 @@ html {
 .banniere-text {
   display: flex;
   position: absolute;
-  top: 120px;
+  top: 20%;
   right: 10%;
   flex-direction: column;
   justify-content: space-around;
@@ -514,7 +514,7 @@ html {
   align-items: center;
   position: absolute;
   left: 55vw;
-  top: 100px;
+  top: 20%;
   z-index: -10;
   width: 450px;
   flex-direction: column;
@@ -549,7 +549,7 @@ html {
     left: 50vw;
   }
   .banniere-text {
-    right: 10%;
+    right: 5%;
   }
 }
 
