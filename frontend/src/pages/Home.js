@@ -12,6 +12,7 @@ import logoLPGDA from '../assets/img/logo-lapagedapres.png';
 import logoEnergie from '../assets/img/logo-energie.png';
 import profilPic from '../assets/img/profile-picture.JPG';
 import { Parallax } from 'react-scroll-parallax';
+import { Link } from 'react-router-dom';
 
 import React, { useState, useEffect } from 'react';
 
@@ -142,7 +143,6 @@ function Home() {
           checked.forEach((element) => {
             element.checked = true;
           });
-          console.log('oui');
         }
       }
     } else {
@@ -152,21 +152,6 @@ function Home() {
       });
       competences.style.textShadow = `none`;
     }
-
-    // Animation des dropdowns de la section compétences
-    // if (scrollY >= 3900) {
-    //   var checked = document.querySelectorAll('.input-drop');
-    //   checked.forEach((element) => {
-    //     element.checked = true;
-    //   });
-    // }
-
-    // if (scrollY <= 3900) {
-    //   var unchecked = document.querySelectorAll('.input-drop');
-    //   unchecked.forEach((element) => {
-    //     element.checked = false;
-    //   });
-    // }
 
     // Animation opacity du texte banniere
     var element = document.getElementById('fade-in');
@@ -236,12 +221,8 @@ function Home() {
             <Parallax className='big-title' translateX={['0vw', '-100vw']} startScroll={100} endScroll={1700}>
               <h1 className='mon'>Mon</h1>
               <h1 className='portfolio'>portfolio</h1>
-              {/* <p>
-                {window.innerWidth} {window.innerHeight}
-              </p> */}
             </Parallax>
           </div>
-          {/* translateX={largeurEcran >= 1100 ? ['80vw', '-45vw'] : ['autre-valeur', 'autre-valeur']} */}
           <Parallax
             id='profil-pic-container'
             translateX={largeurEcran <= 1024 ? ['80vw', '-185vw'] : ['80vw', '-45vw']}
@@ -426,100 +407,109 @@ function Home() {
             <h2>MES REALISATIONS</h2>
             <div className='real-content'>
               <div className='real-firstline'>
-                <div
-                  onMouseEnter={() => realDropped(true, 'energie')}
-                  onMouseLeave={() => realDropped(false, 'energie')}
-                  className='card-real'
-                >
-                  <div className='card-real-header'>
-                    <h3>Energie Animale</h3>
-                  </div>
+                <Link to='https://energieanimale.fr/'>
+                  <div
+                    onMouseEnter={() => realDropped(true, 'energie')}
+                    onMouseLeave={() => realDropped(false, 'energie')}
+                    className='card-real'
+                  >
+                    <div className='card-real-header'>
+                      <h3>Energie Animale</h3>
+                    </div>
 
-                  <div className='card-section'>
-                    {realDrop === 'energie' ? (
-                      <div className='card-text'>
-                        Site réalisé pour une particulière, avec une partie réservée à l'administration, a la gestion
-                        des rendez-vous, des informations de contact, un système de mail et de confirmation de paiement.
-                        Entierement construit avec React et Node.js
-                      </div>
-                    ) : (
-                      <div className='logo-projet'>
-                        <img src={logoEnergie} id='logo-energie-animale' alt='Energie Animale'></img>
-                      </div>
-                    )}
+                    <div className='card-section'>
+                      {realDrop === 'energie' ? (
+                        <div className='card-text'>
+                          Site réalisé avec une partie réservée à l'administration, à la gestion des rendez-vous, des
+                          informations de contact, un système de mail et de confirmation de paiement. Entierement
+                          construit avec React et Node.js
+                        </div>
+                      ) : (
+                        <div className='logo-projet'>
+                          <img src={logoEnergie} id='logo-energie-animale' alt='Energie Animale'></img>
+                        </div>
+                      )}
+                    </div>
                   </div>
-                </div>
+                </Link>
 
-                <div
-                  onMouseEnter={() => realDropped(true, 'page')}
-                  onMouseLeave={() => realDropped(false, 'page')}
-                  className='card-real'
-                >
-                  <div className='card-real-header'>
-                    <h3>La Page D'après</h3>
-                  </div>
+                <Link to='https://lapagedapres.fr/'>
+                  <div
+                    onMouseEnter={() => realDropped(true, 'page')}
+                    onMouseLeave={() => realDropped(false, 'page')}
+                    className='card-real'
+                  >
+                    <div className='card-real-header'>
+                      <h3>La Page D'après</h3>
+                    </div>
 
-                  <div className='card-section'>
-                    {realDrop === 'page' ? (
-                      <div className='card-text'>
-                        Site réalisé sur shopify sans template, avec inspiration du travail de la graphiste. Ajout d'une
-                        application en locale pour la cliente pour rendre la gestion de ses stocks complètement
-                        autonome.
-                      </div>
-                    ) : (
-                      <div className='logo-projet'>
-                        <img src={logoLPGDA} id='logo-lgpda' alt="La page d'après"></img>
-                      </div>
-                    )}
+                    <div className='card-section'>
+                      {realDrop === 'page' ? (
+                        <div className='card-text'>
+                          Site réalisé sur shopify sans template, avec inspiration du travail de la graphiste. Création
+                          d'un serveur FTP afin de gérer plusieurs milliers de produits. Ajout d'une application en
+                          locale pour la cliente pour rendre la gestion de ses stocks complètement autonome.
+                        </div>
+                      ) : (
+                        <div className='logo-projet'>
+                          <img src={logoLPGDA} id='logo-lgpda' alt="La page d'après"></img>
+                        </div>
+                      )}
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
               <div className='real-secondline'>
-                <div
-                  onMouseEnter={() => realDropped(true, 'swear')}
-                  onMouseLeave={() => realDropped(false, 'swear')}
-                  className='card-real'
-                >
-                  <div className='card-real-header'>
-                    <h3>Swear</h3>
-                  </div>
+                <Link to='https://pulldog.fr/'>
+                  <div
+                    onMouseEnter={() => realDropped(true, 'swear')}
+                    onMouseLeave={() => realDropped(false, 'swear')}
+                    className='card-real'
+                  >
+                    <div className='card-real-header'>
+                      <h3>Swear</h3>
+                    </div>
 
-                  <div className='card-section'>
-                    {realDrop === 'swear' ? (
-                      <div className='card-text'>
-                        Site réalisé pour une agence avec un template et collaboration avec la cheffe de projet en
-                        relation avec la cliente.
-                      </div>
-                    ) : (
-                      <div className='logo-projet'>
-                        <img src={logoSwear} id='logo-swear' alt='Swear'></img>
-                      </div>
-                    )}
+                    <div className='card-section'>
+                      {realDrop === 'swear' ? (
+                        <div className='card-text'>
+                          Site réalisé pour une agence avec un template et collaboration avec la cheffe de projet en
+                          relation avec la cliente.
+                        </div>
+                      ) : (
+                        <div className='logo-projet'>
+                          <img src={logoSwear} id='logo-swear' alt='Swear'></img>
+                        </div>
+                      )}
+                    </div>
                   </div>
-                </div>
+                </Link>
 
-                <div
-                  className='card-real'
-                  onMouseEnter={() => realDropped(true, 'pulldog')}
-                  onMouseLeave={() => realDropped(false, 'pulldog')}
-                >
-                  <div className='card-real-header'>
-                    <h3>PullDog</h3>
-                  </div>
+                <Link to='https://pulldog.fr/'>
+                  {' '}
+                  <div
+                    className='card-real'
+                    onMouseEnter={() => realDropped(true, 'pulldog')}
+                    onMouseLeave={() => realDropped(false, 'pulldog')}
+                  >
+                    <div className='card-real-header'>
+                      <h3>PullDog</h3>
+                    </div>
 
-                  <div className='card-section'>
-                    {realDrop === 'pulldog' ? (
-                      <div className='card-text'>
-                        Site anciennement existant réalisé et hébergé sur Joomla, travail de récupération des données et
-                        de reconstruction de la structure entière du site.
-                      </div>
-                    ) : (
-                      <div className='logo-projet'>
-                        <img src={logoPulldog} id='logo-pulldog' alt='Pulldog'></img>
-                      </div>
-                    )}
+                    <div className='card-section'>
+                      {realDrop === 'pulldog' ? (
+                        <div className='card-text'>
+                          Site anciennement existant réalisé et hébergé sur Joomla, travail de récupération des données
+                          et de reconstruction de la structure entière du site.
+                        </div>
+                      ) : (
+                        <div className='logo-projet'>
+                          <img src={logoPulldog} id='logo-pulldog' alt='Pulldog'></img>
+                        </div>
+                      )}
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -539,7 +529,7 @@ function Home() {
         </div>
       </section>
       <footer>
-        <img src={logoVbleu} id='logo-footer'></img>
+        <img src={logoVbleu} alt='pierre-potin' id='logo-footer'></img>
       </footer>
     </div>
   );
