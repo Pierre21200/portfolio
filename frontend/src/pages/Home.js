@@ -116,18 +116,7 @@ function Home() {
       mon.style.backgroundPosition = `bottom 30px left ${-scrollY / 3}px`;
     }
 
-    // Animation text shadow du titre MES COMPETENCES
-    // if (scrollY >= 3950) {
-    //   var competences = document.getElementById('competences-title'); // Remplacez 'elementId' par l'ID de votre élément
-    //   competences.style.textShadow = `5px 5px #558ABB`;
-    // }
-
-    // if (scrollY <= 3950) {
-    //   var competences = document.getElementById('competences-title'); // Remplacez 'elementId' par l'ID de votre élément
-    //   competences.style.textShadow = `none`;
-    // }
-
-    // NEW TRY ANIM COMPETENCES
+    //  ANIM COMPETENCES
     var competencesSeen = false;
     var competences = document.getElementById('competences-title');
     var dropdownContainer = document.querySelector('.dropdown-container');
@@ -145,12 +134,6 @@ function Home() {
           });
         }
       }
-    } else {
-      var checked = document.querySelectorAll('.input-drop');
-      checked.forEach((element) => {
-        element.checked = false;
-      });
-      competences.style.textShadow = `none`;
     }
 
     // Animation opacity du texte banniere

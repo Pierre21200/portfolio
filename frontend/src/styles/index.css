@@ -827,7 +827,7 @@ html {
 
 /* Mes Competences */
 #competences {
-  height: 900px;
+  height: 1100px;
   width: 100%;
   position: relative;
   /* top: -50px; */
@@ -862,7 +862,7 @@ html {
 
 @media all and (min-width: 0px) and (max-width: 1150px) {
   #competences {
-    height: 1050px;
+    height: 1250px;
   }
 }
 
@@ -885,7 +885,7 @@ html {
   position: relative;
   width: 30%;
   filter: url(#goo);
-  color: var(--main-color);
+  color: rgb(10, 54, 97);
   font-weight: bold;
   text-align: center;
   cursor: pointer;
@@ -906,7 +906,7 @@ html {
 }
 
 .dropdown__text {
-  color: var(--main-color);
+  color: rgb(6, 30, 54);
   padding: 15px 0;
   border-radius: 20px;
 }
@@ -928,11 +928,11 @@ html {
   opacity: 0;
   transition: all 0.4s cubic-bezier(0.93, 0.88, 0.1, 0.8);
   font-size: 23px;
-  line-height: 30px;
+  line-height: 40px;
 }
 
 .dropdown__items span {
-  color: black;
+  text-decoration: underline var(--second-color);
 }
 
 .dropdown__items::before {
@@ -993,6 +993,7 @@ svg {
 @media all and (min-width: 0px) and (max-width: 768px) {
   .dropdown-container {
     flex-direction: column;
+    height: 85%;
   }
   .dropdown {
     width: 90vw;
@@ -1001,19 +1002,32 @@ svg {
     margin-bottom: 350px;
   }
   #competences {
-    height: auto;
+    height: 1950px;
   }
 }
 
 @media all and (min-width: 0px) and (max-width: 480px) {
-  .dropdown {
+  /* .dropdown {
     margin-bottom: 400px;
+  } */
+  #competences {
+    height: 2350px;
+  }
+  .dropdown-container {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .dropdown {
+    margin-top: 0;
   }
 }
 
 @media all and (min-width: 0px) and (max-width: 375px) {
   .dropdown {
     margin-bottom: 500px;
+  }
+  #competences {
+    height: 2900px;
   }
 }
 
