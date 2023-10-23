@@ -1082,6 +1082,10 @@ svg {
   text-decoration: none;
 }
 
+#nolink:hover {
+  cursor: default;
+}
+
 .card-real {
   background: linear-gradient(rgb(41, 117, 192), rgb(60, 145, 230));
   width: 100%;
@@ -1094,7 +1098,7 @@ svg {
   text-align: center;
   align-items: center;
   justify-content: space-around;
-  cursor: pointer;
+
   transition: transform 0.5s, box-shadow 0.5s;
 }
 

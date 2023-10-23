@@ -416,7 +416,8 @@ function Home() {
                   </div>
                 </Link>
 
-                <Link to='https://lapagedapres.fr/'>
+                <Link id='nolink'>
+                  {/* to='https://lapagedapres.fr/' */}
                   <div
                     onMouseEnter={() => realDropped(true, 'page')}
                     onMouseLeave={() => realDropped(false, 'page')}
@@ -432,6 +433,8 @@ function Home() {
                           Site réalisé sur shopify sans template, avec inspiration du travail de la graphiste. Création
                           d'un serveur FTP afin de gérer plusieurs milliers de produits. Ajout d'une application en
                           locale pour la cliente pour rendre la gestion de ses stocks complètement autonome.
+                          <br />
+                          <br />- En cours de finition -
                         </div>
                       ) : (
                         <div className='logo-projet'>
@@ -443,7 +446,7 @@ function Home() {
                 </Link>
               </div>
               <div className='real-secondline'>
-                <Link to='https://pulldog.fr/'>
+                <Link id='nolink'>
                   <div
                     onMouseEnter={() => realDropped(true, 'swear')}
                     onMouseLeave={() => realDropped(false, 'swear')}
@@ -457,7 +460,8 @@ function Home() {
                       {realDrop === 'swear' ? (
                         <div className='card-text'>
                           Site réalisé pour une agence avec un template et collaboration avec la cheffe de projet en
-                          relation avec la cliente.
+                          relation avec la cliente. <br />
+                          <br />- En cours de finition -
                         </div>
                       ) : (
                         <div className='logo-projet'>
@@ -469,7 +473,6 @@ function Home() {
                 </Link>
 
                 <Link to='https://pulldog.fr/'>
-                  {' '}
                   <div
                     className='card-real'
                     onMouseEnter={() => realDropped(true, 'pulldog')}
