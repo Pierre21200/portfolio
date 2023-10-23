@@ -10,7 +10,7 @@ import logoPulldog from '../assets/img/logo-pulldog.png';
 import logoSwear from '../assets/img/logo-swear.png';
 import logoLPGDA from '../assets/img/logo-lapagedapres.png';
 import logoEnergie from '../assets/img/logo-energie.png';
-import profilPic from '../assets/img/profile-picture.JPG';
+import profilPic from '../assets/img/profile-picture.png';
 import { Parallax } from 'react-scroll-parallax';
 import { Link } from 'react-router-dom';
 
