@@ -416,7 +416,7 @@ function Home() {
                   </div>
                 </Link>
 
-                <Link id='nolink'>
+                <Link to='https://lapagedapres.fr/'>
                   {/* to='https://lapagedapres.fr/' */}
                   <div
                     onMouseEnter={() => realDropped(true, 'page')}
@@ -434,7 +434,6 @@ function Home() {
                           d'un serveur FTP afin de gérer plusieurs milliers de produits. Ajout d'une application en
                           locale pour la cliente pour rendre la gestion de ses stocks complètement autonome.
                           <br />
-                          <br />- En cours de finition -
                         </div>
                       ) : (
                         <div className='logo-projet'>
@@ -446,7 +445,7 @@ function Home() {
                 </Link>
               </div>
               <div className='real-secondline'>
-                <Link id='nolink'>
+                <Link to='https://swear-shop.com'>
                   <div
                     onMouseEnter={() => realDropped(true, 'swear')}
                     onMouseLeave={() => realDropped(false, 'swear')}
@@ -461,7 +460,6 @@ function Home() {
                         <div className='card-text'>
                           Site réalisé pour une agence avec un template et collaboration avec la cheffe de projet en
                           relation avec la cliente. <br />
-                          <br />- En cours de finition -
                         </div>
                       ) : (
                         <div className='logo-projet'>
